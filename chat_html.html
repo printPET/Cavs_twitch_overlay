@@ -17,6 +17,7 @@
         var chat = document.querySelector("#chat>ul");
 
         ComfyJS.onChat = (user, message, flags, self, extra) => {
+                console.log(user, message);
                 var newMessage = document.createElement("li");
                 newMessage.innerText = `${user}: ${message}`;
                 chat.append(newMessage);
