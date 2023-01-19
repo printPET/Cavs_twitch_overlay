@@ -1,0 +1,18 @@
+#chat: {
+  display:{{alignMessages}};
+  height:98%;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  background-color: rgba(60, 60, 60, 0.4)
+  border-image: linear-gradient(135deg, red, yellow);
+  border: 2px solid red;
+  border-radius: 15px 50px 30px;
+}
+
+#chat::-webkit-scrollbar {
+    display: none;
+}
+
+#chat total_quote:{
+}
