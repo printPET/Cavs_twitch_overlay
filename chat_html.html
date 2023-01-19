@@ -14,14 +14,22 @@
 
 <body>
     <script>
-        var chat = document.querySelector("#chat>ul");
+        document.addEventListener("DOMContentLoaded", function(event) {    
+            var chat = document.querySelector("#chat>ul");
 
-        ComfyJS.onChat = (user, message, flags, self, extra) => {
+            ComfyJS.onChat = (user, message, flags, self, extra) => {
                 console.log(user, message);
+
                 var newMessage = document.createElement("li");
-                newMessage.innerText = `${user}: ${message}`;
+                var text = document.createElement("blockquote");
+
+                newMessage.innerText = user;
+                text.innerText = message;
+
+                newMessage.append(text);
                 chat.append(newMessage);
-        }
+            }
+        });
 
         ComfyJS.Init("thepet04");
     </script>
