@@ -1,7 +1,6 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="chat_css.css">
     <link rel="stylesheet" type="text/css" href="yourpath/all-animation.min.css" />
 
     <meta charset="UTF-8">
@@ -21,7 +20,7 @@
             ComfyJS.onChat = (user, message, flags, self, extra) => {
                 console.log(user, message);
 
-                var newMessage = document.createElement("total_quote");
+                var newMessage = document.createElement("li");
                 var text = document.createElement("blockquote");
 
                 newMessage.innerText = user;
